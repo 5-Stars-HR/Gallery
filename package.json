@@ -1,0 +1,75 @@
+{
+  "name": "gallery_component",
+  "version": "",
+  "description": "Image gallery component for product detail page",
+  "author": "Steve Marquez",
+  "license": "unlicensed",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "reset-db": "mysql -h 'db' -u root < schema.sql",
+    "seed-db": "node db/seeder/seed.js",
+    "react-dev": "webpack -w",
+    "react-prod": "webpack --mode=production",
+    "start": "nodemon ./server/start.js",
+    "build:docker": "bash container.bash",
+    "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors",
+    "ci-test": "jest ./__tests__ --testPathIgnorePatterns ./server --ci -i --detectOpenHandles --forceExit",
+    "server": "concurrently \"npm run start\" \"npm run react-prod\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-jest": "^25.5.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "brotli-gzip-webpack-plugin": "^0.5.0",
+    "compression-webpack-plugin": "^4.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "jest": "^25.5.4",
+    "supertest": "^4.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  },
+  "plugins": [
+    "transform-async-to-generator",
+    "babel-plugin-styled-components"
+  ]
+}

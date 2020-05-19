@@ -1,0 +1,41 @@
+version: '3'
+services:
+  db:
+    container_name: database
+    image: mysql:5.7.29
+    environment:
+      MYSQL_DATABASE: 'gallery'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    volumes:
+      - my-db:/var/lib/mysql
+    networks:
+      - backend
+
+  gallery:
+    container_name: gallerycontainer
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "3001:3001"
+    networks:
+      - backend
+      - frontend
+
+  proxy:
+    container_name: proxyserver
+    build: ../SteveProxyServer/
+    networks:
+      - frontend
+    ports:
+      - "3005:3005"
+    depends_on:
+      - gallery
+
+networks:
+  frontend:
+  backend:
+
+
+volumes:
+  my-db: {}
