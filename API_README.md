@@ -18,7 +18,7 @@
 ```
 
 ### Add image
-  * POST `/api/image`
+  * POST `/api/images`
 
 **Success Status Code:** `201`
 
@@ -33,10 +33,10 @@
 
 
 ### Update image info
-  * PUT `/api/image/:id`
+  * PUT `/api/images/:id`
 
 **Path Parameters:**
-  * `id` restaurant id
+  * `id` image id
 
 **Success Status Code:** `204`
 
@@ -49,11 +49,11 @@
     }
 ```
 
-### Delete restaurant
-  * DELETE `/api/image/:id`
+### Delete image
+  * DELETE `/api/images/:id`
 
 **Path Parameters:**
-  * `id` restaurant id
+  * `id` image id
 
 **Success Status Code:** `204`
 

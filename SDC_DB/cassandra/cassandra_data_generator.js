@@ -1,14 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const faker = require('faker');
-const {Pool} = require('pg');
+const {Client} = require('cassandra-driver');
 
-const connection = new Pool ({
-  host: 'localhost',
-  user: 'postgres',
-  password: 'password',
-  database: 'gallery',
-})
+
 
 
 let imageSeed = ``;

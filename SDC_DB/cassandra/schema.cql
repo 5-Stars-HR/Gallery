@@ -4,18 +4,14 @@ CREATE KEYSPACE gallery;
 USE gallery;
 
 CREATE TABLE products (
-  id INT,
+  id uuid,
   PRIMARY KEY(id)
 );
 
 CREATE TABLE images (
-    id INT,
-    image_url TEXT
+    id uuid,
+    product_id uuid,
+    image_url TEXT,
+    PRIMARY KEY(product_id, id)
 );
 
-CREATE TABLE reference (
-    reference_id INT,
-    product_id INT,
-    image_id INT
-    PRIMARY KEY(reference_id)
-);
