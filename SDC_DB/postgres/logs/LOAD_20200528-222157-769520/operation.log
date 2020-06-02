@@ -1,0 +1,10 @@
+2020-05-28 22:21:57 INFO  Operation directory: /Users/sumitlal/Desktop/SDC/Gallery/SDC_DB/postgres/logs/LOAD_20200528-222157-769520
+2020-05-28 22:26:08 INFO  Operation LOAD_20200528-222157-769520 completed successfully in 3 minutes and 54 seconds.
+2020-05-28 22:26:10 INFO  Final stats:
+2020-05-28 22:26:10 INFO  Records: total: 10,000,001, successful: 10,000,001, failed: 0
+2020-05-28 22:26:10 INFO  Batches: total: 10,000,001, size: 1.00 mean, 1 min, 1 max
+2020-05-28 22:26:10 INFO  Memory usage: used: 839 MB, free: 322 MB, allocated: 1,161 MB, available: 3,641 MB, total gc count: 93, total gc time: 1,940 ms
+2020-05-28 22:26:10 INFO  Writes: total: 10,000,001, successful: 10,000,001, failed: 0, in-flight: 0
+2020-05-28 22:26:10 INFO  Throughput: 42,290 writes/second
+2020-05-28 22:26:10 INFO  Latencies: mean 8.57, 75p 10.35, 99p 30.80, 999p 187.70 milliseconds
+2020-05-28 22:26:10 INFO  Last processed positions can be found in positions.txt
